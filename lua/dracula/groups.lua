@@ -45,10 +45,10 @@ local function setup(configs)
       Float = { fg = colors.orange, },
       FloatBorder = { fg = colors.white, },
       Operator = { fg = colors.purple, },
-      Keyword = { fg = colors.cyan, },
+      Keyword = { fg = colors.pink, },
       Keywords = { fg = colors.cyan, },
-      Identifier = { fg = colors.cyan, },
-      Function = { fg = colors.yellow, },
+      Identifier = { fg = colors.fg, },
+      Function = { fg = colors.green, },
       Statement = { fg = colors.purple, },
       Conditional = { fg = colors.pink, },
       Repeat = { fg = colors.pink, },
@@ -129,7 +129,7 @@ local function setup(configs)
       TSError = { fg = colors.bright_red, },
       TSPunctDelimiter = { fg = colors.fg, },
       TSPunctBracket = { fg = colors.fg, },
-      TSPunctSpecial = { fg = colors.fg, },
+      TSPunctSpecial = { fg = colors.pink, },
 
       TSConstant = { fg = colors.purple, },
       TSConstantBuiltin = { fg = colors.purple, },
@@ -144,9 +144,9 @@ local function setup(configs)
       TSFloat = { fg = colors.green, },
       TSAnnotation = { fg = colors.yellow, },
       TSAttribute = { fg = colors.cyan, },
-      TSNamespace = { fg = colors.orange, },
+      TSNamespace = { fg = colors.fg, },
 
-      TSFuncBuiltin = { fg = colors.cyan, },
+      TSFuncBuiltin = { fg = colors.green, },
       TSFunction = { fg = colors.green, },
       TSFuncMacro = { fg = colors.green, },
       TSParameter = { fg = colors.orange, },
@@ -154,18 +154,18 @@ local function setup(configs)
       TSMethod = { fg = colors.green, },
       TSField = { fg = colors.orange, },
       TSProperty = { fg = colors.fg, },
-      TSConstructor = { fg = colors.cyan, },
+      TSConstructor = { fg = colors.fg, },
 
       TSConditional = { fg = colors.pink, },
       TSRepeat = { fg = colors.pink, },
       TSLabel = { fg = colors.cyan, },
 
       TSKeyword = { fg = colors.pink, },
-      TSKeywordFunction = { fg = colors.cyan, },
+      TSKeywordFunction = { fg = colors.pink, },
       TSKeywordOperator = { fg = colors.pink, },
       TSOperator = { fg = colors.pink, },
       TSException = { fg = colors.purple, },
-      TSType = { fg = colors.bright_cyan, },
+      TSType = { fg = colors.cyan, italic = true, },
       TSTypeBuiltin = { fg = colors.cyan, italic = true, },
       TSStructure = { fg = colors.purple, },
       TSInclude = { fg = colors.pink, },
@@ -311,6 +311,17 @@ local function setup(configs)
       LspReferenceText = { fg = colors.orange, },
       LspReferenceRead = { fg = colors.orange, },
       LspReferenceWrite = { fg = colors.orange, },
+
+      --LSP Semantic Highlight
+      LspParameter = { fg = colors.orange, italic = true },
+      LspVariableReadOnly = { fg = colors.purple, },
+      LspFunction = { fg = colors.green,  },
+      LspMember = {  fg = colors.green, },
+      LspNamespace = { fg = colors.cyan },
+      LspClass = { fg = colors.cyan },
+
+      --JSX
+      ["@constructor.jsx"] = {fg=colors.cyan, italic = true},
 
       --LSP Saga
       LspFloatWinNormal = { fg = colors.fg, },
